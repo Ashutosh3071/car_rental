@@ -94,6 +94,16 @@ input#name{
     box-shadow:inset 1px 1px 5px rgba(0,0,0,0.3);
 }
 
+input#duration{
+    width:300px;
+    border:1px solid #ddd;
+    border-radius: 3px;
+    outline: 0;
+    padding: 7px;
+    background-color: #fff;
+    box-shadow:inset 1px 1px 5px rgba(0,0,0,0.3);
+}
+    
 input#dfield{
     width:300px;
     border:1px solid #ddd;
@@ -325,13 +335,13 @@ ul li a:hover{
             <label>BOOKING DATE : </label>
             <br>
             <input type ="date" name="date"
-            id="datefield" min='1899-01-01' max='2000-13-13'  placeholder="ENTER THE DATE FOR BOOKING">
+            id="datefield" min='1899-01-01' max='2000-13-13'  placeholder="ENTER THE DATE FOR BOOKING" onchange=calculateEndDate()>
             <br><br>
 
             <label>DURATION : </label>
             <br>
             <input type ="number" name="dur" min="1" max="30" 
-            id="name" placeholder="Enter Rent Period (in days)">
+            id="duration" placeholder="Enter Rent Period (in days)" onchange=calculateEndDate()>
             <br><br>
 
             <label>PHONE NUMBER : </label>
@@ -357,24 +367,7 @@ ul li a:hover{
         </div>
     </div>
     
-    <script>
-        var today = new Date();
-        var dd = today.getDate();
-        var mm = today.getMonth() + 1; //January is 0!
-        var yyyy = today.getFullYear();
-        if (dd < 10) {
-             dd = '0' + dd
-        }
-        if (mm < 10) {
-              mm = '0' + mm
-        }
-
-        today = yyyy + '-' + mm + '-' + dd;
-        document.getElementById("datefield").setAttribute("min", today);
-        document.getElementById("datefield").setAttribute("max", today);
-
-
-    </script>
+   
     <script>
         var today = new Date();
         var dd = today.getDate();
@@ -392,6 +385,28 @@ ul li a:hover{
         
 
 
+    </script>
+
+    <script>
+
+    function calculateEndDate() {
+        let startDate = new Date(document.getElementById('datefield').value);
+        let duration = parseInt(document.getElementById("duration").value);
+        if(duration > 31){
+            alert("Enter Duration below 31");
+        }else {
+            let endDate = new Date(startDate.getTime()+duration*24*60*60*1000);
+
+            var day = ("0"+endDate.getDate()).toString().slice(-2);
+            var month = ("0"+(endDate.getMonth()+1).toString().slice(-2));
+            var year = endDate.getFullYear();
+        
+        
+
+        var mainEndDate = year + "-" + month + "-" + day;
+        document.getElementById("dfield").value = mainEndDate;
+        }
+    }
     </script>
     
     
