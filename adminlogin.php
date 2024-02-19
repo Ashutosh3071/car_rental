@@ -177,7 +177,7 @@ body{
                     // session_start();
                     // $_SESSION['email'] = $email;
                     echo '<script>alert("Welcome ADMINISTRATOR!");</script>';
-                    header("location: admindash.php");
+                    header("location: adminvehicle.php");
                     
                 }
                 else{
