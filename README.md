@@ -100,22 +100,10 @@ This is a project for a car rental website. It is a project for the College Mini
 - Admin can delete a reservation by clicking the delete button.
 - Admin can view feedback by clicking the view button.
 
-## Project Report
-
-- The project report is stored in a folder called [report](https://github.com/Varshithvhegde/car_rental_project/raw/main/report/CarProjectFinalReport.pdf).
-- Report consists of the following:
-    - Introduction
-    - Literature Review
-    - Methodology
-    - Result
-    - Conclusion
-    - References
-- The project report is written in Microsoft Word.
-- The project repot has flow chart, ERD, and UML diagram.
 
 ##  License
 
-[MIT](https://choosealicense.com/licenses/mit/) © [Ashutosh Sahoo](https://github.com/Varshithvhegde)
+[MIT](https://choosealicense.com/licenses/mit/) © [Ashutosh Sahoo](https://github.com/Ashutosh3071)
 - This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Demo
@@ -124,7 +112,7 @@ This is a project for a car rental website. It is a project for the College Mini
 
 ## Authors 
 
-
+https://github.com/Ashutosh3071
 
 ## Show your support
 
